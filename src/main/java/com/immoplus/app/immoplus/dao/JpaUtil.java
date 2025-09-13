@@ -15,6 +15,7 @@ public class JpaUtil {
 
             }
         } catch (Exception e) {
+            System.out.println("Erreur lors de la création de l'EntityManagerFactory: " + e.getMessage());
             e.printStackTrace();
 
         }
