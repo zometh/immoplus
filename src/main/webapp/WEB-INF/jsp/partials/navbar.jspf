@@ -1,0 +1,17 @@
+<%
+    com.immoplus.app.immoplus.entities.Utilisateur currentUser =
+        (com.immoplus.app.immoplus.entities.Utilisateur) session.getAttribute("user");
+%>
+<nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-end h-16 items-center">
+            <div class="flex items-center">
+                <span class="text-sm mr-4">Bienvenue, <%= currentUser != null ? currentUser.getNom() : "Invité" %></span>
+                <a href="/login"
+                   class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded-md text-sm font-medium text-white">
+                    Déconnexion
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

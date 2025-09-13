@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence     xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+                 version="2.1">
+    <persistence-unit name="JEE_EXAM">
+        <description> Hibernate JPA Configuration Example</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>com.immoplus.app.immoplus.entities.Utilisateur</class>
+        <class>com.immoplus.app.immoplus.entities.ContratLocation</class>
+        <class>com.immoplus.app.immoplus.entities.Immeuble</class>
+        <class>com.immoplus.app.immoplus.entities.Paiement</class>
+        <class>com.immoplus.app.immoplus.entities.UniteLocation</class>
+        <class>com.immoplus.app.immoplus.entities.DemandeLocation</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                      value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:postgresql://localhost:5432/jee_exam_db" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password"
+                      value="passer" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+</persistence>
